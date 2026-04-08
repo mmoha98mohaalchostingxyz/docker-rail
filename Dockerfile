@@ -87,7 +87,7 @@ RUN chmod +x /app/start.sh && \
     chown user:user /app/config.json /app/start.sh
 
 # 10. Ensure the downloads folder exists with correct permissions
-RUN mkdir -p /app/downloads && chown -R user:user /app
+RUN mkdir -p /app/downloads && chown -R user:user /app && chmod 777 /app/downloads
 
 # 11. Switch to the Hugging Face user
 USER user
